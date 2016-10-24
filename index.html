@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sweeper of Mines</title>
+    <link rel="stylesheet" href="css/mineStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <header>
+            Welcome to Sweeper of Mines!
+        </header>
+
+        <div id="gameInit">
+            <div>Select your board size:</div>
+            <input id="fives" type="radio" name="boardSize" value="5" checked><label for="fives">5 &times; 5</label>
+            <input id="tens" type="radio" name="boardSize" value="10"><label for="tens">10 &times; 10</label>
+            <input id="fifteens" type="radio" name="boardSize" value="15"><label for="fifteens">15 &times; 15</label>
+            <button id="start" onclick="myGame.startGame()">Start Game</button>
+        </div>
+        <div id="statusBar">
+            <span>Bombs left: </span>
+            <span id="bombValue"></span>
+            <span>Time: </span>
+            <span id="minutes">00:</span>
+            <span id="seconds">00</span>
+        </div>
+        <div id="gameBoard"></div>
+        <button id="restart" onclick="myGame.restartGame()">New Game</button>
+        <div id="gameOver"></div>
+    </div>
+
+    <script src="https://use.fontawesome.com/44ea897ebc.js"></script>
+    <script src="public/thirdParty/jquery/dist/jquery.min.js"></script>
+    <script src="public/thirdParty/gsap/src/uncompressed/TweenMax.js"></script>
+    <script src="public/thirdParty/gsap/src/uncompressed/plugins/CSSPlugin.js"></script>
+    <script src="js/mineSweep.js"></script>
+</body>
+</html>
